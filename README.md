@@ -1,16 +1,67 @@
-# React + Vite
+BetterWay – Mini E-Commerce Product & Cart UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BetterWay is a small e-commerce frontend built using React (with Vite) and Tailwind CSS.
+The project focuses on component design, state management, and clean React practices rather than extra features.
 
-Currently, two official plugins are available:
+This application was developed as part of a frontend assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features->
+  Product listing displayed in a responsive grid
+  Search products by name (debounced)
+  Filter products by category
+  Sort products by price (Low → High, High → Low)
+  Add / remove items from cart
+  Update item quantity (stock-aware)
+  Disabled actions for out-of-stock products
+  Cart summary showing total items and total price
+  Persistent cart using localStorage
+  Proper empty states (no products, empty cart)
 
-## React Compiler
+Design & Analysis->
+  Before implementation, rough sketches were created to plan:
+  Page layout
+  Component breakdown
+  Data flow between product list, filters, and cart
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech Stack->
+  React (Functional Components only)
+  Vite for project setup
+  Tailwind CSS for styling
+  JavaScript (ES6+)
+  No UI libraries were used, as per requirements.
 
-## Expanding the ESLint configuration
+Project Structure
+src/
+ ├─ components/
+ │   ├─ ProductCard.jsx
+ │   ├─ ProductGrid.jsx
+ │   ├─ Filters.jsx
+ │   └─ Cart.jsx
+ ├─ hooks/
+ │   ├─ useProducts.js
+ │   └─ useDebounce.js
+ ├─ App.jsx
+ └─ main.jsx
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Key Implementation Details->
+  Component isolation: Each UI section has a clear responsibility
+  Optimized rendering: React.memo used for product cards
+  Debounced search: Prevents unnecessary re-renders
+  Derived state: Filters and sorting are applied together
+  LocalStorage sync: Cart state persists across refreshes
+
+Setup Instructions->
+  Clone the repository -> git clone https://github.com/<your-username>/betterway-ui.git
+  Install dependencies -> npm install
+  Start the development server -> npm run dev
+  The app will run at: http://localhost:5173
+
+Notes
+
+Backend is mocked as required
+Focus was kept on clarity, correctness, and maintainability
+Bonus features were implemented without affecting core functionality
+
+Author
+Akshita Aggarwal
+Frontend / MERN Developer
