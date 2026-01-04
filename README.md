@@ -32,16 +32,16 @@ Tech Stack->
 
 Project Structure
 src/
- ├─ components/
- │   ├─ ProductCard.jsx
- │   ├─ ProductGrid.jsx
- │   ├─ Filters.jsx
- │   └─ Cart.jsx
- ├─ hooks/
- │   ├─ useProducts.js
- │   └─ useDebounce.js
- ├─ App.jsx
- └─ main.jsx
+  components/
+       ProductCard.jsx
+       ProductGrid.jsx
+       Filters.jsx
+       Cart.jsx
+  hooks/
+       useProducts.js
+       useDebounce.js
+  App.jsx
+  main.jsx
 
 Key Implementation Details->
   Component isolation: Each UI section has a clear responsibility
