@@ -6,7 +6,7 @@ The project focuses on component design, state management, and clean React pract
 This application was developed as part of a frontend assignment.
 
 Features->
-  Product listing displayed in a responsive grid
+  Product listing displayed in a responsive grid 
   Search products by name (debounced)
   Filter products by category
   Sort products by price (Low → High, High → Low)
